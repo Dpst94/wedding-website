@@ -1,0 +1,51 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Dachel's Wedding</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Poiret+One" rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'css/wedding.css' %}">
+        </head>
+    <body>
+        <!--
+        <div class="page-header">
+            <h1><a href="/">Daryl & Rachel</a></h1>
+        </div>
+        -->
+
+{#        <div class="navigation container">#}
+{#            <div class="row">#}
+{#                <div class="col-sm-3"><a href="/">Home</a></div>#}
+{#                <div class="col-sm-3"><a href="/activities/">To Do</a></div>#}
+{#                <div class="col-sm-3"><a href="/">Calendar</a></div>#}
+{#                <div class="col-sm-3"><a href="/">Contact</a></div>#}
+{#            </div>#}
+{#        </div>#}
+
+        <nav class="navbar navbar-default">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="#">Daryl & Rachel</a>
+            </div>
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#">To Do</a></li>
+              <li><a href="#">Calendar</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+
+        <h1>Daryl & Rachel</h1>
+        <h2>May 11th 2018</h2>
+
+        {% block content %}
+        {% endblock %}
+
+    </body>
+</html>
