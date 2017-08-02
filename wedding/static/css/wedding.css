@@ -1,12 +1,18 @@
 .page-header {
-    background-color: #ffc3b3;
+    background-color: #fff0ed;
+    /*background-color: #ffc3b3;*/
     padding: 20px 20px 20px 20px;
-    margin: 0 0 20px;
+    margin: 0 0 0;
 }
 
 .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
-    color: #ffffff;
-    font-size: 46pt;
+    color: black;
+    font-size: 50px;
+    text-align: center;
+}
+
+.page-header h2 {
+    text-align: center;
 }
 
 .navigation a {
@@ -19,12 +25,11 @@ body {
     /*background-color: #fff0ed;*/
     background: url(http://taioffice.com/uploads/ctv_10/pink-shiny-with-bokeh-effect-background_1114-50.jpg);
     background-size: cover;
-    text-align: center;
     font-family: 'Poiret One', cursive;
 }
 
-h1, h2 {
-    padding-left: 20px;
+h1, h2, h3, h4, h5, h6, p {
+    padding-left: 40px;
     display: block;
 }
 
@@ -39,8 +44,17 @@ h2 {
 img {
     margin: 40px;
 }
+
 .content {
     margin-left: 40px;
+}
+
+.homepage {
+    text-align: center;
+}
+
+.activity {
+
 }
 
 .date {

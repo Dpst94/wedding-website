@@ -1,0 +1,19 @@
+{%  extends 'wedding/base.html' %}
+
+{% block content %}
+
+    <h2>Activities for the wedding:</h2>
+    {% for activity in activities %}
+        <div class="activity">
+
+        <h2><a href="{% url 'activity_detail' pk=activity.pk %}">{{ activity.title }}</a></h2>
+        <p>{{ activity.text|linebreaksbr }}</p>
+            <p><em>deadline:</em> {{ activity.deadline }}</p>
+        <p><b>Task for </b> {{ activity.assigned_to }}</p></h3>
+        <p>---------------------------------------------------------------------------</p>
+
+
+        </div>
+    {% endfor %}
+
+{% endblock %}

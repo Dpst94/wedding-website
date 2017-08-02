@@ -1,0 +1,17 @@
+{%  extends 'wedding/base.html' %}
+
+{% block content %}
+
+    <div class="activity">
+
+    <h2>{{ activity.title }}</h2>
+    <p>{{ activity.text|linebreaksbr }}</p>
+        <p><em>deadline:</em> {{ activity.deadline }}</p>
+    <p><b>Task for </b> {{ activity.assigned_to }}</p></h3>
+
+
+
+    </div>
+
+
+{% endblock %}
