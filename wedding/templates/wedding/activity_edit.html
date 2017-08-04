@@ -1,0 +1,11 @@
+{% extends 'wedding/base.html' %}
+
+{% block content %}
+    <h2>New Activity</h2>
+
+    <form method="POST" class="post-form">{% csrf_token %}
+        {{ form.as_p }}
+        <p>Pleas use the following date format for the deadline: YYYY-MM-DD (optional time: HH:mm:ss)</p>
+        <button type="submit" class="save btn btn-default">Save</button>
+    </form>
+{% endblock %}

@@ -3,6 +3,8 @@
 {% block content %}
 
     <h2>Activities for the wedding:</h2>
+    <div><a href="{% url 'activity_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a></div>
+
     {% for activity in activities %}
         <div class="activity">
 

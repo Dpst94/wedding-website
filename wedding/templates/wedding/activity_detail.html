@@ -3,11 +3,13 @@
 {% block content %}
 
     <div class="activity">
+        <a class="btn btn-default" href="{% url 'activity_edit' pk=activity.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+        <a class="btn btn-default" href="{% url 'activity_remove' pk=activity.pk %}"><span class="glyphicon glyphicon-remove"></span></a>
 
-    <h2>{{ activity.title }}</h2>
-    <p>{{ activity.text|linebreaksbr }}</p>
+        <h2>{{ activity.title }}</h2>
+        <p>{{ activity.text|linebreaksbr }}</p>
         <p><em>deadline:</em> {{ activity.deadline }}</p>
-    <p><b>Task for </b> {{ activity.assigned_to }}</p></h3>
+        <p><b>Task for </b> {{ activity.assigned_to }}</p></h3>
 
 
 

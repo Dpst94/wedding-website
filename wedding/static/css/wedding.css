@@ -1,18 +1,13 @@
-.page-header {
-    background-color: #fff0ed;
-    /*background-color: #ffc3b3;*/
-    padding: 20px 20px 20px 20px;
-    margin: 0 0 0;
+#wrapper {
+    width: 100%;
+    overflow: hidden;
 }
-
-.page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
-    color: black;
-    font-size: 50px;
-    text-align: center;
+#container {
+    width: 100%;
+    margin: 0 auto;
 }
-
-.page-header h2 {
-    text-align: center;
+.banner-img {
+    width: 100%;
 }
 
 .navigation a {
@@ -30,6 +25,7 @@ body {
 
 h1, h2, h3, h4, h5, h6, p {
     padding-left: 40px;
+    padding-right: 40px;
     display: block;
 }
 
@@ -41,16 +37,17 @@ h2 {
     font-size: 30px;
 }
 
-img {
-    margin: 40px;
-}
-
 .content {
     margin-left: 40px;
+    margin-right: 40px;
 }
 
 .homepage {
     text-align: center;
+}
+
+.glyphicon {
+    float: right;
 }
 
 .activity {
@@ -63,10 +60,11 @@ img {
 
 .save {
     float: right;
+    margin-right: 80px;
 }
 
 .post-form textarea, .post-form input {
-    width: 100%;
+    width: 80%;
 }
 
 .top-menu, .top-menu:hover, .top-menu:visited {
