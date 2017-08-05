@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from .models import Activity
-from .forms import ActivityForm
+from .models import Activity, GuestNote
+from .forms import ActivityForm, GuestNoteForm
 
 def homepage(request):
     return render(request, 'wedding/homepage.html', {})
@@ -9,14 +9,23 @@ def rsvp(request):
     return render(request, 'wedding/rsvp.html', {})
 
 def guestbook(request):
-    return render(request, 'wedding/guestbook.html', {})
+    guestnotes = GuestNote.objects.order_by('-created_date')
+    if request.method == "POST":
+        form = GuestNoteForm(request.POST)
+        if form.is_valid():
+            guestnote = form.save(commit=False)
+            guestnote.save()
+            return redirect('guestbook')
+    else:
+        form = GuestNoteForm()
+    return render(request, 'wedding/guestbook.html', {'guestnotes': guestnotes, 'form':form})
 
 def contact(request):
     return render(request, 'wedding/contact.html', {})
 
 def activity_list(request):
     activities = Activity.objects.order_by('deadline')
-    return render(request, 'wedding/activity_list.html', {'activities':activities})
+    return render(request, 'wedding/activity_list.html', {'activities': activities})
 
 def activity_detail(request, pk):
     activity = get_object_or_404(Activity, pk=pk)

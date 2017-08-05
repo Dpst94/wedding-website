@@ -24,8 +24,6 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6, p {
-    padding-left: 40px;
-    padding-right: 40px;
     display: block;
 }
 
@@ -38,8 +36,7 @@ h2 {
 }
 
 .content {
-    margin-left: 40px;
-    margin-right: 40px;
+
 }
 
 .homepage {
@@ -56,11 +53,17 @@ h2 {
 
 .date {
     color: #828282;
+    float: right;
+}
+
+.guestnote {
+    margin: 40px 0px 40px 40px;
 }
 
 .save {
     float: right;
     margin-right: 80px;
+    margin-bottom: 20px;
 }
 
 .post-form textarea, .post-form input {

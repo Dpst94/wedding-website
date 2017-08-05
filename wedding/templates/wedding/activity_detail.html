@@ -9,8 +9,11 @@
         <h2>{{ activity.title }}</h2>
         <p>{{ activity.text|linebreaksbr }}</p>
         <p><em>deadline:</em> {{ activity.deadline }}</p>
-        <p><b>Task for </b> {{ activity.assigned_to }}</p></h3>
+        <p><b>Task for </b> {{ activity.assigned_to }}</p>
+        <br><br>
 
+
+        <a class="btn btn-default" href="{% url 'activity_list' %}"><span class="glyphicon glyphicon-arrow-left"></span></a>
 
 
     </div>

@@ -59,9 +59,15 @@
           </div>
         </nav>
 
-
-        {% block content %}
-        {% endblock %}
-
+        <div class="content container">
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                    {% block content %}
+                    {% endblock %}
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+        </div>
     </body>
 </html>

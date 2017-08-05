@@ -2,8 +2,22 @@
 
 {% block content %}
     <div class="guestbook">
-    <h2>Guestbook</h2>
-    <p style="text-align:center"><img src="https://scontent-amt2-1.cdninstagram.com/t51.2885-15/e35/19624314_654997521376270_2220985441971077120_n.jpg" alt="wedding pic" style="width:50%;height:50%"></p>
+        <h2>Leave a note for the groom and bride!</h2>
+
+        <form method="POST" class="post-form">{% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="save btn btn-default">Submit</button>
+        </form>
+
+        <h3><br>Notes left by our guests:</h3>
+
+        {% for guestnote in guestnotes %}
+            <div class="guestnote">
+                <div class="date">{{ guestnote.created_date }}</div>
+                <strong>From: {{ guestnote.author }}</strong>
+                <p>{{ guestnote.text|linebreaks }}</p>
+            </div>
+        {% endfor %}
 
     </div>
 {% endblock %}
